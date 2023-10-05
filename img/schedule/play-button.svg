@@ -1,0 +1,12 @@
+<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Play">
+<circle id="Ellipse 1" cx="28" cy="28" r="28" fill="url(#paint0_linear_50_780)"/>
+<path id="Polygon 1" d="M25.3924 37.0531C24.059 37.8229 22.3924 36.8607 22.3924 35.3211L22.3924 21.4647C22.3924 19.925 24.059 18.9628 25.3924 19.7326L37.3924 26.6608C38.7257 27.4306 38.7257 29.3551 37.3924 30.1249L25.3924 37.0531Z" fill="white"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_50_780" x1="28" y1="10.7059" x2="35.2606" y2="54.8046" gradientUnits="userSpaceOnUse">
+<stop stop-color="#827BFD"/>
+<stop offset="1" stop-color="#736BF8"/>
+</linearGradient>
+</defs>
+</svg>
