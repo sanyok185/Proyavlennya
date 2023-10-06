@@ -3859,12 +3859,6 @@ body::after {
   }
 }
 
-@media (max-width: 71.875em) {
-  .how__arrow--2 {
-    display: none;
-  }
-}
-
 @media (max-width: 68.75em) {
   .schedule__circle {
     display: none;
@@ -6961,6 +6955,12 @@ body::after {
       padding-bottom: calc(3.8125rem + 4.125 * (100vw - 22.5rem) / 62.875);
     }
 }
+}
+
+@media (max-width: 71.875em) and (min-width: 47.99875em) {
+  .how__arrow--2 {
+    display: none;
+  }
 }
 
 @media (min-width: 47.9375em) and (max-width: 85.375em) {
