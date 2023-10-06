@@ -874,9 +874,9 @@ body::after {
 
 .how__arrow--2._watcher-view {
   opacity: 1;
-  -webkit-transform: translate(0, 0rem);
-      -ms-transform: translate(0, 0rem);
-          transform: translate(0, 0rem);
+  -webkit-transform: translate(0, 0rem) rotate(-36.534deg);
+      -ms-transform: translate(0, 0rem) rotate(-36.534deg);
+          transform: translate(0, 0rem) rotate(-36.534deg);
 }
 
 .how__body {
@@ -2579,7 +2579,7 @@ body::after {
 }
 
 @media (min-width: 29.99875em) {
-  .hero__eclipse img:nth-child(2) {
+  .hero__eclipse--2 {
     display: none;
   }
 
@@ -4247,9 +4247,9 @@ body::after {
     height: 4.0625rem;
     display: block;
     top: 0.8125rem;
-    -webkit-transform: rotate(-36.534deg);
-        -ms-transform: rotate(-36.534deg);
-            transform: rotate(-36.534deg);
+    -webkit-transform: rotate(36.534deg);
+        -ms-transform: rotate(36.534deg);
+            transform: rotate(36.534deg);
   }
 
   .how__body {
@@ -4450,7 +4450,7 @@ body::after {
     left: -0.5625rem;
   }
 
-  .hero__eclipse img:nth-child(1) {
+  .hero__eclipse--1 {
     display: none;
   }
 
