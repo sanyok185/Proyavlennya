@@ -6,10 +6,11 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231006101857">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231010211125">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://www.youtube.com/iframe_api?_v=20231010211125"></script>
 </head>
 
 <body>
@@ -28,7 +29,10 @@
 							<li data-goto=".page__request" class="menu__item"><a href="#" class="menu__link">Контакти</a></li>
 						</ul>
 					</nav>
-					<button type="button" class="menu__icon icon-menu"><span></span><span></span></button>
+					<button type="button" class="header__button button-header">
+						<div type="button" class="menu__icon icon-menu"><span></span><span></span></div>
+					</button>
+
 				</div>
 			</div>
 		</header>
@@ -101,9 +105,13 @@
 							</div>
 						</div>
 						<div class="how__video video-how">
-							<button type="button" class="video-how__play play-button">
+							<iframe data-youtube-video="M7lc1UVf-VE" id="player" data-src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<button data-youtube-play type="button" class="video-how__play play-button">
 								<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
 							</button>
+							<div class="video-how__image-ibg image-video-ibg">
+								<picture><source srcset="img/about/01.webp" type="image/webp"><img src="img/about/01.jpg" alt=""></picture>
+							</div>
 						</div>
 						<div class="how__elements">
 							<div data-watch class="how__element">
@@ -355,16 +363,18 @@
 						<span>Програма</span> курсу
 					</h2>
 					<div data-spollers data-spollers-speed="700" data-one-spoller class="schedule__spollers spollers-schedule">
-						<details class="spollers-schedule__spoller">
+						<details data-open class="spollers-schedule__spoller">
 							<summary class="spollers-schedule__title _icon-arrow">
 								Заняття 1
 							</summary>
 							<div class="spollers-schedule__body">
-								<div class="spollers__video video-spollers">
-									<div class="video-spollers__image-ibg">
+								<div class="spollers__video video-spollers video">
+									<iframe data-youtube-video="M7lc1UVf-VE" id="player" data-src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+									<div class="video-spollers__image-ibg image-video-ibg">
 										<picture><source srcset="img/schedule/01.webp" type="image/webp"><img src="img/schedule/01.jpg" alt="Image" /></picture>
 									</div>
-									<button type="button" class="video-spollers__button play-button">
+									<button data-youtube-play type="button" class="video-spollers__button play-button">
 										<img src="img/schedule/play-button.svg" alt="" />
 									</button>
 								</div>
@@ -409,11 +419,13 @@
 								Заняття 2
 							</summary>
 							<div class="spollers-schedule__body">
-								<div class="spollers__video video-spollers">
-									<div class="video-spollers__image-ibg">
+								<div class="spollers__video video-spollers video">
+									<iframe data-youtube-video="M7lc1UVf-VE" id="player" data-src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+									<div class="video-spollers__image-ibg image-video-ibg">
 										<picture><source srcset="img/schedule/01.webp" type="image/webp"><img src="img/schedule/01.jpg" alt="Image" /></picture>
 									</div>
-									<button type="button" class="video-spollers__button play-button">
+									<button data-youtube-play type="button" class="video-spollers__button play-button">
 										<img src="img/schedule/play-button.svg" alt="" />
 									</button>
 								</div>
@@ -458,11 +470,13 @@
 								Заняття 3
 							</summary>
 							<div class="spollers-schedule__body">
-								<div class="spollers__video video-spollers">
-									<div class="video-spollers__image-ibg">
+								<div class="spollers__video video-spollers video">
+									<iframe data-youtube-video="M7lc1UVf-VE" id="player" data-src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+									<div class="video-spollers__image-ibg image-video-ibg">
 										<picture><source srcset="img/schedule/01.webp" type="image/webp"><img src="img/schedule/01.jpg" alt="Image" /></picture>
 									</div>
-									<button type="button" class="video-spollers__button play-button">
+									<button data-youtube-play type="button" class="video-spollers__button play-button">
 										<img src="img/schedule/play-button.svg" alt="" />
 									</button>
 								</div>
@@ -507,11 +521,13 @@
 								Заняття 4
 							</summary>
 							<div class="spollers-schedule__body">
-								<div class="spollers__video video-spollers">
-									<div class="video-spollers__image-ibg">
+								<div class="spollers__video video-spollers video">
+									<iframe data-youtube-video="M7lc1UVf-VE" id="player" data-src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+									<div class="video-spollers__image-ibg image-video-ibg">
 										<picture><source srcset="img/schedule/01.webp" type="image/webp"><img src="img/schedule/01.jpg" alt="Image" /></picture>
 									</div>
-									<button type="button" class="video-spollers__button play-button">
+									<button data-youtube-play type="button" class="video-spollers__button play-button">
 										<img src="img/schedule/play-button.svg" alt="" />
 									</button>
 								</div>
@@ -556,11 +572,13 @@
 								Заняття 5
 							</summary>
 							<div class="spollers-schedule__body">
-								<div class="spollers__video video-spollers">
-									<div class="video-spollers__image-ibg">
+								<div class="spollers__video video-spollers video">
+									<iframe data-youtube-video="M7lc1UVf-VE" id="player" data-src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+									<div class="video-spollers__image-ibg image-video-ibg">
 										<picture><source srcset="img/schedule/01.webp" type="image/webp"><img src="img/schedule/01.jpg" alt="Image" /></picture>
 									</div>
-									<button type="button" class="video-spollers__button play-button">
+									<button data-youtube-play type="button" class="video-spollers__button play-button">
 										<img src="img/schedule/play-button.svg" alt="" />
 									</button>
 								</div>
@@ -605,11 +623,13 @@
 								Заняття 6
 							</summary>
 							<div class="spollers-schedule__body">
-								<div class="spollers__video video-spollers">
-									<div class="video-spollers__image-ibg">
+								<div class="spollers__video video-spollers video">
+									<iframe data-youtube-video="M7lc1UVf-VE" id="player" data-src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+									<div class="video-spollers__image-ibg image-video-ibg">
 										<picture><source srcset="img/schedule/01.webp" type="image/webp"><img src="img/schedule/01.jpg" alt="Image" /></picture>
 									</div>
-									<button type="button" class="video-spollers__button play-button">
+									<button data-youtube-play type="button" class="video-spollers__button play-button">
 										<img src="img/schedule/play-button.svg" alt="" />
 									</button>
 								</div>
@@ -654,11 +674,13 @@
 								Заняття 7
 							</summary>
 							<div class="spollers-schedule__body">
-								<div class="spollers__video video-spollers">
-									<div class="video-spollers__image-ibg">
+								<div class="spollers__video video-spollers video">
+									<iframe data-youtube-video="M7lc1UVf-VE" id="player" data-src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+									<div class="video-spollers__image-ibg image-video-ibg">
 										<picture><source srcset="img/schedule/01.webp" type="image/webp"><img src="img/schedule/01.jpg" alt="Image" /></picture>
 									</div>
-									<button type="button" class="video-spollers__button play-button">
+									<button data-youtube-play type="button" class="video-spollers__button play-button">
 										<img src="img/schedule/play-button.svg" alt="" />
 									</button>
 								</div>
@@ -703,11 +725,13 @@
 								Заняття 8
 							</summary>
 							<div class="spollers-schedule__body">
-								<div class="spollers__video video-spollers">
-									<div class="video-spollers__image-ibg">
+								<div class="spollers__video video-spollers video">
+									<iframe data-youtube-video="M7lc1UVf-VE" id="player" data-src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+									<div class="video-spollers__image-ibg image-video-ibg">
 										<picture><source srcset="img/schedule/01.webp" type="image/webp"><img src="img/schedule/01.jpg" alt="Image" /></picture>
 									</div>
-									<button type="button" class="video-spollers__button play-button">
+									<button data-youtube-play type="button" class="video-spollers__button play-button">
 										<img src="img/schedule/play-button.svg" alt="" />
 									</button>
 								</div>
@@ -752,11 +776,13 @@
 								Індивідуальна сесія
 							</summary>
 							<div class="spollers-schedule__body">
-								<div class="spollers__video video-spollers">
-									<div class="video-spollers__image-ibg">
+								<div class="spollers__video video-spollers video">
+									<iframe data-youtube-video="M7lc1UVf-VE" id="player" data-src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+									<div class="video-spollers__image-ibg image-video-ibg">
 										<picture><source srcset="img/schedule/01.webp" type="image/webp"><img src="img/schedule/01.jpg" alt="Image" /></picture>
 									</div>
-									<button type="button" class="video-spollers__button play-button">
+									<button data-youtube-play type="button" class="video-spollers__button play-button">
 										<img src="img/schedule/play-button.svg" alt="" />
 									</button>
 								</div>
@@ -990,7 +1016,7 @@
 							</div>
 							<button data-watch data-goto=".page__request" type="button" class="about__button button"><span>Запишіться на пробне заняття</span></button>
 						</div>
-						<div class="about__video video-about">
+						<div class="about__video video-about video">
 							<div data-watch data-watch-once class="video-about__caption">
 								<div class="video-about__textbox">
 									Обовязково подивись це відео  Дениса 
@@ -999,10 +1025,11 @@
 									</div>
 								</div>
 							</div>
-							<div class="video-about__image-ibg">
+							<iframe data-youtube-video="M7lc1UVf-VE" id="player" data-src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<div class="video-about__image image-video-ibg">
 								<picture><source srcset="img/about/01.webp" type="image/webp"><img src="img/about/01.jpg" alt="Image"></picture>
 							</div>
-							<div class="video-about__button play-button">
+							<div data-youtube-play class="video-about__button play-button">
 								<img src="img/about/Play.svg" alt="Play">
 							</div>
 						</div>
@@ -1109,16 +1136,20 @@
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button data-close type="button" class="popup__close _icon-close"></button>
-				<div class="popup__video">
-
+				<div class="popup__video video">
+					<iframe data-youtube-video="M7lc1UVf-VE" id="player" data-src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					<div class="video-about__image image-video-ibg">
+						<picture><source srcset="img/about/01.webp" type="image/webp"><img src="img/about/01.jpg" alt="Image"></picture>
+					</div>
+					<div data-youtube-play class="popup__button play-button">
+						<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play"></picture>
+					</div>
 				</div>
-				<button type="button" class="popup__button play-button">
-					<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play"></picture>
-				</button>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20231006101857"></script>
+	<script src="js/app.min.js?_v=20231010211125"></script>
+
 </body>
 
 </html>
