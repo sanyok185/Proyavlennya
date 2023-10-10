@@ -862,16 +862,6 @@ body::after {
   opacity: 1;
 }
 
-.hero__eclipses {
-  -webkit-transition: all 0.7s 1.2s;
-  transition: all 0.7s 1.2s;
-  opacity: 0;
-}
-
-.loaded .hero__eclipses {
-  opacity: 1;
-}
-
 .hero__eclipse {
   position: absolute;
 }

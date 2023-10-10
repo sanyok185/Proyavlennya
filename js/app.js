@@ -4361,6 +4361,13 @@
             loadYoutubeVideo(video);
         }));
     }));
+    self.addEventListener("fetch", (event => {
+        event.respondWith(event.preloadResponse.then((preloadedResponse => {
+            if (preloadedResponse) return preloadedResponse;
+            return fetch(event.request);
+        })));
+        event.waitUntil(caches.open("my-cache").then((cache => cache.add(event.request))));
+    }));
     window["FLS"] = true;
     isWebp();
     addLoadedClass();
