@@ -4076,6 +4076,7 @@
             observeParents: true,
             slidesPerView: 3,
             spaceBetween: 24,
+            autoHeight: true,
             speed: 800,
             pagination: {
                 el: ".swiper-pagination",

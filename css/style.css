@@ -4271,6 +4271,10 @@ body::after {
     padding: 6.75rem 0.9375rem 1.875rem 3.25rem;
   }
 
+  .menu__item {
+    width: 100%;
+  }
+
   .menu__link {
     font-size: 0.9375rem;
   }
