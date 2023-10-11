@@ -4719,31 +4719,29 @@
         }), 0);
         let ready = false;
         function loadYoutubeVideo(video) {
-            window.onYouTubeIframeAPIReady = function() {
-                document.dispatchEvent(new CustomEvent("onYouTubeIframeAPIReady", {}));
-            };
-            if (ready == false) {
-                let tag = document.createElement("script");
-                tag.src = "https://www.youtube.com/iframe_api";
-                let firstScriptTag = document.getElementsByTagName("script")[0];
-                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-                ready = true;
+            let tag = document.createElement("script");
+            tag.src = "http://www.youtube.com/iframe_api";
+            let firstScriptTag = document.getElementsByTagName("script")[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            ready = true;
+            function onYouTubeIframeAPIReady() {
+                let player;
+                const videoParent = video.parentElement;
+                const playButton = videoParent.querySelector("[data-youtube-play]");
+                player = new YT.Player(video, {
+                    videoId: video.dataset.youtubeVideo,
+                    playerVars: {
+                        autoplay: 0,
+                        rel: 0
+                    },
+                    origin: location.hostname
+                });
+                if (playButton) playButton.addEventListener("click", (function() {
+                    player.playVideo();
+                    videoParent.classList.add("_hide");
+                }));
             }
-            let player;
-            const videoParent = video.parentElement;
-            const playButton = videoParent.querySelector("[data-youtube-play]");
-            player = new YT.Player(video, {
-                videoId: video.dataset.youtubeVideo,
-                playerVars: {
-                    autoplay: 0,
-                    rel: 0
-                },
-                origin: "https://www.youtube.com"
-            });
-            if (playButton) playButton.addEventListener("click", (function() {
-                player.playVideo();
-                videoParent.classList.add("_hide");
-            }));
+            onYouTubeIframeAPIReady();
         }
         window.addEventListener("load", (function(e) {
             const videos = document.querySelectorAll("[data-youtube-video]");
@@ -4758,6 +4756,8 @@
             })));
             event.waitUntil(caches.open("my-cache").then((cache => cache.add(event.request))));
         }));
+        window.origin = "https://www.youtube.com";
+        console.log(window.origin);
         window["FLS"] = true;
         isWebp();
         addLoadedClass();
