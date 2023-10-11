@@ -445,7 +445,8 @@ body::after {
   z-index: 2;
 }
 
-[data-youtube-play] {
+[data-youtube-play],
+.play-button {
   z-index: 4;
   position: absolute;
   cursor: pointer;
@@ -453,7 +454,8 @@ body::after {
   transition: all 0.3s;
 }
 
-._hide [data-youtube-play] {
+._hide [data-youtube-play],
+._hide .play-button {
   opacity: 0;
   visibility: hidden;
 }
@@ -464,6 +466,8 @@ body::after {
   width: 100%;
   height: 100%;
   z-index: 3;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 ._hide .image-video-ibg {
@@ -1989,9 +1993,22 @@ body::after {
   -webkit-box-shadow: 0px 0px 0.25rem 0px rgba(170, 170, 170, 0.25);
           box-shadow: 0px 0px 0.25rem 0px rgba(170, 170, 170, 0.25);
   padding: 2rem 1.5rem 2.5rem 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .swiper-testimonial__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   font-weight: 500;
   line-height: 150%;
 }
@@ -2790,11 +2807,12 @@ body::after {
 
   .testimonials__controls .swiper-button-prev {
     bottom: 15.9375rem;
+    bottom: 41%;
     left: -3.4375rem;
   }
 
   .testimonials__controls .swiper-button-next {
-    bottom: 15.9375rem;
+    bottom: 41%;
     right: -3.4375rem;
   }
 }
@@ -7846,7 +7864,8 @@ body::after {
     opacity: 1;
   }
 
-  [data-youtube-play]:hover {
+  [data-youtube-play]:hover,
+  .play-button:hover {
     -webkit-transform: scale(1.07);
         -ms-transform: scale(1.07);
             transform: scale(1.07);

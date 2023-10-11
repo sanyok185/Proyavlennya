@@ -6,11 +6,12 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231011164016">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231011210417">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://www.youtube.com/iframe_api?_v=20231011164016"></script>
+	<!-- <script src="https://www.youtube.com/iframe_api?_v=20231011210417"></script> -->
+	<script async src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@latest/dist/lazyload.min.js?_v=20231011210417"></script>
 </head>
 
 <body>
@@ -99,18 +100,16 @@
 							<div data-watch class="how__item">
 								Як виступати на публіці та не боятись?
 							</div>
-							<div data-watch class="how__item">Як виражати свої емоції?</div>
+							<div data-watch class="how__item">
+								Як виражати свої емоції?
+							</div>
 							<div data-watch class="how__item">
 								Як проживати емоції, а не подавляти їх?
 							</div>
 						</div>
-						<div class="how__video video-how">
-							<iframe data-youtube-video="M7lc1UVf-VE" id="player" src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-							<button data-youtube-play type="button" class="video-how__play play-button">
+						<div class="embed-youtube how__video video-how" data-video-id="f_BbMJQDZCY">
+							<div class="embed-youtube-play video-how__play play-button">
 								<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
-							</button>
-							<div class="video-how__image-ibg image-video-ibg">
-								<picture><source srcset="img/about/01.webp" type="image/webp"><img src="img/about/01.jpg" alt=""></picture>
 							</div>
 						</div>
 						<div class="how__elements">
@@ -124,10 +123,8 @@
 						</div>
 					</div>
 					<div class="how__arrows">
-						<div data-watch class="how__arrow how__arrow--1">
-						</div>
-						<div data-watch class="how__arrow how__arrow--2">
-						</div>
+						<div data-watch class="how__arrow how__arrow--1"></div>
+						<div data-watch class="how__arrow how__arrow--2"></div>
 					</div>
 					<div data-prlx-parent class="how__figures">
 						<div data-prlx class="how__square how__square--1">
@@ -368,15 +365,13 @@
 								Заняття 1
 							</summary>
 							<div class="spollers-schedule__body">
-								<div class="spollers__video video-spollers video">
-									<iframe data-youtube-video="M7lc1UVf-VE" id="player" src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-									<div class="video-spollers__image-ibg image-video-ibg">
-										<picture><source srcset="img/schedule/01.webp" type="image/webp"><img src="img/schedule/01.jpg" alt="Image" /></picture>
+								<div class="embed-youtube spollers__video video-spollers video" data-video-id="f_BbMJQDZCY">
+									<div class="embed-youtube-play video-how__play play-button">
+										<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
 									</div>
-									<button data-youtube-play type="button" class="video-spollers__button play-button">
-										<img src="img/schedule/play-button.svg" alt="" />
-									</button>
+									<!-- <div class="video-how__image-ibg image-video-ibg"> 
+											<picture><source srcset="img/about/01.webp" type="image/webp"><img src="img/about/01.jpg" alt=""></picture>
+										</div> -->
 								</div>
 								<ul class="spollers-schedule__list">
 									<li class="spollers-schedule__item">
@@ -419,15 +414,13 @@
 								Заняття 2
 							</summary>
 							<div class="spollers-schedule__body">
-								<div class="spollers__video video-spollers video">
-									<iframe data-youtube-video="M7lc1UVf-VE" id="player" src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-									<div class="video-spollers__image-ibg image-video-ibg">
-										<picture><source srcset="img/schedule/01.webp" type="image/webp"><img src="img/schedule/01.jpg" alt="Image" /></picture>
+								<div class="embed-youtube spollers__video video-spollers video" data-video-id="f_BbMJQDZCY">
+									<div class="embed-youtube-play video-how__play play-button">
+										<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
 									</div>
-									<button data-youtube-play type="button" class="video-spollers__button play-button">
-										<img src="img/schedule/play-button.svg" alt="" />
-									</button>
+									<!-- <div class="video-how__image-ibg image-video-ibg"> 
+											<picture><source srcset="img/about/01.webp" type="image/webp"><img src="img/about/01.jpg" alt=""></picture>
+										</div> -->
 								</div>
 								<ul class="spollers-schedule__list">
 									<li class="spollers-schedule__item">
@@ -470,15 +463,13 @@
 								Заняття 3
 							</summary>
 							<div class="spollers-schedule__body">
-								<div class="spollers__video video-spollers video">
-									<iframe data-youtube-video="M7lc1UVf-VE" id="player" src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-									<div class="video-spollers__image-ibg image-video-ibg">
-										<picture><source srcset="img/schedule/01.webp" type="image/webp"><img src="img/schedule/01.jpg" alt="Image" /></picture>
+								<div class="embed-youtube spollers__video video-spollers video" data-video-id="f_BbMJQDZCY">
+									<div class="embed-youtube-play video-how__play play-button">
+										<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
 									</div>
-									<button data-youtube-play type="button" class="video-spollers__button play-button">
-										<img src="img/schedule/play-button.svg" alt="" />
-									</button>
+									<!-- <div class="video-how__image-ibg image-video-ibg"> 
+											<picture><source srcset="img/about/01.webp" type="image/webp"><img src="img/about/01.jpg" alt=""></picture>
+										</div> -->
 								</div>
 								<ul class="spollers-schedule__list">
 									<li class="spollers-schedule__item">
@@ -521,15 +512,13 @@
 								Заняття 4
 							</summary>
 							<div class="spollers-schedule__body">
-								<div class="spollers__video video-spollers video">
-									<iframe data-youtube-video="M7lc1UVf-VE" id="player" src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-									<div class="video-spollers__image-ibg image-video-ibg">
-										<picture><source srcset="img/schedule/01.webp" type="image/webp"><img src="img/schedule/01.jpg" alt="Image" /></picture>
+								<div class="embed-youtube spollers__video video-spollers video" data-video-id="f_BbMJQDZCY">
+									<div class="embed-youtube-play video-how__play play-button">
+										<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
 									</div>
-									<button data-youtube-play type="button" class="video-spollers__button play-button">
-										<img src="img/schedule/play-button.svg" alt="" />
-									</button>
+									<!-- <div class="video-how__image-ibg image-video-ibg"> 
+											<picture><source srcset="img/about/01.webp" type="image/webp"><img src="img/about/01.jpg" alt=""></picture>
+										</div> -->
 								</div>
 								<ul class="spollers-schedule__list">
 									<li class="spollers-schedule__item">
@@ -572,15 +561,13 @@
 								Заняття 5
 							</summary>
 							<div class="spollers-schedule__body">
-								<div class="spollers__video video-spollers video">
-									<iframe data-youtube-video="M7lc1UVf-VE" id="player" src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-									<div class="video-spollers__image-ibg image-video-ibg">
-										<picture><source srcset="img/schedule/01.webp" type="image/webp"><img src="img/schedule/01.jpg" alt="Image" /></picture>
+								<div class="embed-youtube spollers__video video-spollers video" data-video-id="f_BbMJQDZCY">
+									<div class="embed-youtube-play video-how__play play-button">
+										<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
 									</div>
-									<button data-youtube-play type="button" class="video-spollers__button play-button">
-										<img src="img/schedule/play-button.svg" alt="" />
-									</button>
+									<!-- <div class="video-how__image-ibg image-video-ibg"> 
+											<picture><source srcset="img/about/01.webp" type="image/webp"><img src="img/about/01.jpg" alt=""></picture>
+										</div> -->
 								</div>
 								<ul class="spollers-schedule__list">
 									<li class="spollers-schedule__item">
@@ -623,15 +610,13 @@
 								Заняття 6
 							</summary>
 							<div class="spollers-schedule__body">
-								<div class="spollers__video video-spollers video">
-									<iframe data-youtube-video="M7lc1UVf-VE" id="player" src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-									<div class="video-spollers__image-ibg image-video-ibg">
-										<picture><source srcset="img/schedule/01.webp" type="image/webp"><img src="img/schedule/01.jpg" alt="Image" /></picture>
+								<div class="embed-youtube spollers__video video-spollers video" data-video-id="f_BbMJQDZCY">
+									<div class="embed-youtube-play video-how__play play-button">
+										<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
 									</div>
-									<button data-youtube-play type="button" class="video-spollers__button play-button">
-										<img src="img/schedule/play-button.svg" alt="" />
-									</button>
+									<!-- <div class="video-how__image-ibg image-video-ibg"> 
+											<picture><source srcset="img/about/01.webp" type="image/webp"><img src="img/about/01.jpg" alt=""></picture>
+										</div> -->
 								</div>
 								<ul class="spollers-schedule__list">
 									<li class="spollers-schedule__item">
@@ -674,13 +659,13 @@
 								Заняття 7
 							</summary>
 							<div class="spollers-schedule__body">
-								<div class="spollers__video video-spollers">
-									<div class="video-spollers__image-ibg">
-										<picture><source srcset="img/schedule/01.webp" type="image/webp"><img src="img/schedule/01.jpg" alt="Image" /></picture>
+								<div class="embed-youtube spollers__video video-spollers video" data-video-id="f_BbMJQDZCY">
+									<div class="embed-youtube-play video-how__play play-button">
+										<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
 									</div>
-									<button type="button" class="video-spollers__button play-button">
-										<img src="img/schedule/play-button.svg" alt="" />
-									</button>
+									<!-- <div class="video-how__image-ibg image-video-ibg"> 
+											<picture><source srcset="img/about/01.webp" type="image/webp"><img src="img/about/01.jpg" alt=""></picture>
+										</div> -->
 								</div>
 								<ul class="spollers-schedule__list">
 									<li class="spollers-schedule__item">
@@ -723,15 +708,13 @@
 								Заняття 8
 							</summary>
 							<div class="spollers-schedule__body">
-								<div class="spollers__video video-spollers video">
-									<iframe data-youtube-video="M7lc1UVf-VE" id="player" src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-									<div class="video-spollers__image-ibg image-video-ibg">
-										<picture><source srcset="img/schedule/01.webp" type="image/webp"><img src="img/schedule/01.jpg" alt="Image" /></picture>
+								<div class="embed-youtube spollers__video video-spollers video" data-video-id="f_BbMJQDZCY">
+									<div class="embed-youtube-play video-how__play play-button">
+										<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
 									</div>
-									<button data-youtube-play type="button" class="video-spollers__button play-button">
-										<img src="img/schedule/play-button.svg" alt="" />
-									</button>
+									<div class="video-how__image-ibg image-video-ibg">
+										<picture><source srcset="img/about/01.webp" type="image/webp"><img src="img/about/01.jpg" alt="" /></picture>
+									</div>
 								</div>
 								<ul class="spollers-schedule__list">
 									<li class="spollers-schedule__item">
@@ -774,15 +757,13 @@
 								Індивідуальна сесія
 							</summary>
 							<div class="spollers-schedule__body">
-								<div class="spollers__video video-spollers video">
-									<iframe data-youtube-video="M7lc1UVf-VE" id="player" src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-									<div class="video-spollers__image-ibg image-video-ibg">
-										<picture><source srcset="img/schedule/01.webp" type="image/webp"><img src="img/schedule/01.jpg" alt="Image" /></picture>
+								<div class="embed-youtube spollers__video video-spollers video" data-video-id="f_BbMJQDZCY">
+									<div class="embed-youtube-play video-how__play play-button">
+										<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
 									</div>
-									<button data-youtube-play type="button" class="video-spollers__button play-button">
-										<img src="img/schedule/play-button.svg" alt="" />
-									</button>
+									<!-- <div class="video-how__image-ibg image-video-ibg"> 
+											<picture><source srcset="img/about/01.webp" type="image/webp"><img src="img/about/01.jpg" alt=""></picture>
+										</div> -->
 								</div>
 								<ul class="spollers-schedule__list">
 									<li class="spollers-schedule__item">
@@ -871,7 +852,46 @@
 										проявлят Створюється
 									</p>
 								</div>
-								<button type="button" data-popup="#popup-video" class="swiper-testimonial__link">
+								<button type="button" data-popup="#popup-video_1" class="swiper-testimonial__link">
+									Відтворити відео
+								</button>
+							</div>
+							<div class="swiper-testimonial__slide swiper-slide">
+								<div class="swiper-testimonial__person person-testimonial">
+									<div class="person-testimonial__avatar-ibg">
+										<picture><source srcset="img/testimonials/01.webp" type="image/webp"><img src="img/testimonials/01.jpg" alt="Avatar" /></picture>
+									</div>
+									<div class="person-testimonial__info">
+										<div class="person-testimonial__name">
+											Олександр Іванов
+										</div>
+										<div class="person-testimonial__position">
+											Підприємець
+										</div>
+									</div>
+								</div>
+								<div class="swiper-testimonial__text">
+									<p>
+										Хочу в обратиться ко всем, кто собирается пойти
+										на курс, но что-то их держит: я пошел на курс
+										"Проявление" и это был один из самых
+										незабываемых месяцев в моей жизни. Ты полностью
+										переосмысливаешь окружающий тебя мир, а с
+										каждого занятия выходишь обновлённый, более
+										уверенный в себе и выносишь опыт, который
+										сложно получить где-либо ещё. Это те уроки, где
+										после первых 15 минут чувствуешь себя в
+										компании друзей, с которыми вы вместе
+										меняетесь. Даже если Вы не хотите быть актёром
+										- приходите, здесь вы получите гораздо больше,
+										чем уроки актёрского мастерства. Лично я
+										обязательно продолжу обучение у Дениса, уже на
+										курсах актёрского мастерства) Если ждёте знака,
+										что пора действовать - это он, дерзайте и не
+										сомневайтесь ни секунды.
+									</p>
+								</div>
+								<button type="button" data-popup="#popup-video_2" class="swiper-testimonial__link">
 									Відтворити відео
 								</button>
 							</div>
@@ -891,14 +911,27 @@
 								</div>
 								<div class="swiper-testimonial__text">
 									<p>
-										Створюється підтримуюча атмосфера, в якій
-										людина починає розкриватись та
-										проявлятись. Створюється підтримуюча атмосфера,
-										в якій людина починає розкриватись та
-										проявлят Створюється
+										В восторге от Вашего ролика о курсе актёрского
+										мастерства! И готова прислать свой отзыв в
+										стихах, который родился на следующий день после
+										пробного занятия. Для меня оно стало мощным
+										архиватором, настоящим zip файлом, который
+										загрузился в меня на душевном, телесном и
+										эмоциональном уровне! И, вот, уже целый месяц я
+										занимаюсь его распаковыванием! Произошла
+										перезагрузка в отношениях с мужем, изменился
+										творческий поток, в мою жизнь пришли новые
+										удивительные люди и события! Денис, Ваши курсы
+										действительно очень мощный инструмент
+										проработки программ, влекущий за собой
+										кардинальные изменения и, безусловно, духовный
+										рост, поэтому, чувствую, как важна осознанность
+										и готовность участников к этим процессам! Ведь
+										они реально волшебные! И однозначно творящие
+										чудеса!
 									</p>
 								</div>
-								<button type="button" data-popup="#popup-video" class="swiper-testimonial__link">
+								<button type="button" data-popup="#popup-video_3" class="swiper-testimonial__link">
 									Відтворити відео
 								</button>
 							</div>
@@ -918,14 +951,25 @@
 								</div>
 								<div class="swiper-testimonial__text">
 									<p>
-										Створюється підтримуюча атмосфера, в якій
-										людина починає розкриватись та
-										проявлятись. Створюється підтримуюча атмосфера,
-										в якій людина починає розкриватись та
-										проявлят Створюється
+										Школа актерского мастерства Дениса Шевченко -
+										это место, где происходят настоящие чудеса с
+										внутренним миром: самоощущение и мышление
+										меняются просто кардинально. Приходит
+										осознание, что ты вышел из зоны комфорта,
+										преодолел свой страх и теперь способен на
+										большее. Это место радости, взаимного принятия,
+										поддержки, и, вместе с тем, активной работы по
+										всем фронтам: физической и психологической.
+										Развивается фантазия, учишься доверять людям,
+										чувствовать партнеров по площадке на
+										интуитивном уровне, появляется навык легко себя
+										чувствовать среди большого количества людей.
+										Всем настоятельно рекомендую прийти на курс
+										БЕЗОТЛАГАТЕЛЬНО, если вы хотите выйти на новый
+										уровень жизни и отношения к себе.
 									</p>
 								</div>
-								<button type="button" data-popup="#popup-video" class="swiper-testimonial__link">
+								<button type="button" data-popup="#popup-video_4" class="swiper-testimonial__link">
 									Відтворити відео
 								</button>
 							</div>
@@ -945,14 +989,84 @@
 								</div>
 								<div class="swiper-testimonial__text">
 									<p>
-										Створюється підтримуюча атмосфера, в якій
-										людина починає розкриватись та
-										проявлятись. Створюється підтримуюча атмосфера,
-										в якій людина починає розкриватись та
-										проявлят Створюється
+										Спасибо тебе огромное Денис! За то что ты
+										делаешь, за то как ты умело трансформируешь
+										людей, даёшь инструменты для самопознания и
+										ведёшь по пути чувствования себя! Я специально
+										выдержала время, что бы смогла осознанно
+										высказать своё чувство, без примеси эмоций.
+										Курс раскрепощения - на меня повлиял так
+										глубинно, что я сама не ожидала, сейчас я
+										пришла к тому, чего действительно хочу и в чём
+										вижу максимальный ресурс для себя ж Ты скажешь
+										что это всё заслуги твоих учителей, но я скажу,
+										что тем самым учителем ты стал для меня и для
+										группы и за твои учения Благодарю, Благодарю,
+										Благодарю
 									</p>
 								</div>
-								<button type="button" data-popup="#popup-video" class="swiper-testimonial__link">
+								<button type="button" data-popup="#popup-video_5" class="swiper-testimonial__link">
+									Відтворити відео
+								</button>
+							</div>
+							<div class="swiper-testimonial__slide swiper-slide">
+								<div class="swiper-testimonial__person person-testimonial">
+									<div class="person-testimonial__avatar-ibg">
+										<picture><source srcset="img/testimonials/01.webp" type="image/webp"><img src="img/testimonials/01.jpg" alt="Avatar" /></picture>
+									</div>
+									<div class="person-testimonial__info">
+										<div class="person-testimonial__name">
+											Петро Іванов
+										</div>
+										<div class="person-testimonial__position">
+											Адвокат
+										</div>
+									</div>
+								</div>
+								<div class="swiper-testimonial__text">
+									<p>
+										Благодарю и хочу поделиться впечатлениями и
+										эмоциями от вчерашнего занятия.Благодарю за
+										внимание к себе и каждому участнику группы,за
+										бережное отношение к чувствам,за
+										практики,которые помогли открыть в себе ресурс
+										и по-новому ощутить своё тело. Получила ценный
+										опыт и полезную,уникальную информацию.Ехала
+										домой с ощущением уверенности,что на верном
+										пути
+									</p>
+								</div>
+								<button type="button" data-popup="#popup-video_6" class="swiper-testimonial__link">
+									Відтворити відео
+								</button>
+							</div>
+							<div class="swiper-testimonial__slide swiper-slide">
+								<div class="swiper-testimonial__person person-testimonial">
+									<div class="person-testimonial__avatar-ibg">
+										<picture><source srcset="img/testimonials/01.webp" type="image/webp"><img src="img/testimonials/01.jpg" alt="Avatar" /></picture>
+									</div>
+									<div class="person-testimonial__info">
+										<div class="person-testimonial__name">
+											Петро Іванов
+										</div>
+										<div class="person-testimonial__position">
+											Адвокат
+										</div>
+									</div>
+								</div>
+								<div class="swiper-testimonial__text">
+									<p>
+										Для меня было несколько открытий по поводу
+										родителей, отношения с ними и как это влияет на
+										твою жизнь, общение с друзьями, социальное
+										общение, работу. Практики по телу откликнулись.
+										Сегодня проснулась с мыслью о том как лучше
+										чувствовать своё тело и понимать, что реально
+										хочет тело, а что тебе нашёптывает ум в данный
+										момент. Жду сегодняшнего занятия)
+									</p>
+								</div>
+								<button type="button" data-popup="#popup-video_7" class="swiper-testimonial__link">
 									Відтворити відео
 								</button>
 							</div>
@@ -987,49 +1101,42 @@
 							<div class="about__items">
 								<div data-watch data-watch-once class="about__item item-about">
 									<div class="item-about__icon">
-										<img src="img/icons/case.svg" alt="Icon">
+										<img src="img/icons/case.svg" alt="Icon" />
 									</div>
 									<div class="item-about__text">
-										Кількість занять:<br><span>8 + 1 індивідуальне</span>
+										Кількість занять:<br /><span>8 + 1 індивідуальне</span>
 									</div>
 								</div>
 								<div data-watch data-watch-once class="about__item item-about">
 									<div class="item-about__icon">
-										<img src="img/icons/calendar.svg" alt="Icon">
+										<img src="img/icons/calendar.svg" alt="Icon" />
 									</div>
 									<div class="item-about__text">
-										Графік: <br>
+										Графік: <br />
 										<span>субота з 12:00-14:30; </span>
 										<span>неділя з 13:30-16:00 </span>
 									</div>
 								</div>
 								<div data-watch data-watch-once class="about__item item-about">
 									<div class="item-about__icon">
-										<img src="img/icons/wallet.svg" alt="Icon">
+										<img src="img/icons/wallet.svg" alt="Icon" />
 									</div>
 									<div class="item-about__text">
 										Цiна: <span>9000 грн  </span>
 									</div>
 								</div>
 							</div>
-							<button data-watch data-goto=".page__request" type="button" class="about__button button"><span>Запишіться на пробне заняття</span></button>
+							<button data-watch data-goto=".page__request" type="button" class="about__button button">
+								<span>Запишіться на пробне заняття</span>
+							</button>
 						</div>
-						<div class="about__video video-about video">
-							<div data-watch data-watch-once class="video-about__caption">
-								<div class="video-about__textbox">
-									Обовязково подивись це відео  Дениса 
-									<div class="video-about__arrow">
-										<img src="img/about/curly-arrow.svg" alt="Arrow">
-									</div>
-								</div>
+						<div class="embed-youtube about__video video-about video" data-video-id="f_BbMJQDZCY">
+							<div class="embed-youtube-play video-how__play play-button">
+								<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
 							</div>
-							<iframe data-youtube-video="M7lc1UVf-VE" id="player" src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-							<div class="video-about__image image-video-ibg">
-								<picture><source srcset="img/about/01.webp" type="image/webp"><img src="img/about/01.jpg" alt="Image"></picture>
-							</div>
-							<div data-youtube-play class="video-about__button play-button">
-								<img src="img/about/Play.svg" alt="Play">
-							</div>
+							<!-- <div class="video-how__image-ibg image-video-ibg"> 
+									<picture><source srcset="img/about/01.webp" type="image/webp"><img src="img/about/01.jpg" alt=""></picture>
+								</div> -->
 						</div>
 					</div>
 				</div>
@@ -1046,24 +1153,29 @@
 				<div class="request__container">
 					<div class="request__content">
 						<h2 data-watch class="request__title title">
-							<span>Залиште заявку</span> і пориньте
-							в театральне мистецтво
+							<span>Залиште заявку</span> і пориньте в театральне
+							мистецтво
 						</h2>
 						<div data-watch data-watch-once class="request__label">
 							Запишись на безкоштовний пробний урок
 						</div>
 						<form data-watch data-watch-once data-dev class="request__form form-request form" action="#">
-							<h5 class="form-request__title">Заповніть форму <br> <span>І ми з тобою зв'яжемося</span></h5>
+							<h5 class="form-request__title">
+								Заповніть форму <br />
+								<span>І ми з тобою зв'яжемося</span>
+							</h5>
 							<div class="form-request__item">
-								<input data-required type="text" name="userName" data-error="Помилка" placeholder="Прізвище та ім'я" class="form-request__input input">
+								<input data-required type="text" name="userName" data-error="Помилка" placeholder="Прізвище та ім'я" class="form-request__input input" />
 							</div>
 							<div class="form-request__item">
-								<input data-required="email" type="text" name="userMail" data-error="Помилка" placeholder="E-mail" class="form-request__input input">
+								<input data-required="email" type="text" name="userMail" data-error="Помилка" placeholder="E-mail" class="form-request__input input" />
 							</div>
 							<div class="form-request__item">
-								<input data-required type="tel" name="userPhone" data-error="Помилка" placeholder="Телефон" class="form-request__input input">
+								<input data-required type="tel" name="userPhone" data-error="Помилка" placeholder="Телефон" class="form-request__input input" />
 							</div>
-							<button type="submit" class="form-request__button button button--orange"><span>Записатись</span></button>
+							<button type="submit" class="form-request__button button button--orange">
+								<span>Записатись</span>
+							</button>
 						</form>
 					</div>
 					<div class="request__images">
@@ -1130,23 +1242,92 @@
 			</div>
 		</footer>
 	</div>
-	<div id="popup-video" aria-hidden="true" class="popup">
+	<div id="popup-video_1" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button data-close type="button" class="popup__close _icon-close"></button>
-				<div class="popup__video video">
-					<iframe data-youtube-video="M7lc1UVf-VE" id="player" src="https://www.youtube.com/embed/f_BbMJQDZCY?si=sYOTYI_FPAxY44qT&amp;controls=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen"></iframe>
-					<div class="video-about__image image-video-ibg">
-						<picture><source srcset="img/about/01.webp" type="image/webp"><img src="img/about/01.jpg" alt="Image"></picture>
-					</div>
-					<div data-youtube-play class="popup__button play-button">
-						<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play"></picture>
+				<div class="embed-youtube popup__video video" data-video-id="f_BbMJQDZCY">
+					<div class="embed-youtube-play video-how__play play-button">
+						<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20231011164016"></script>
+
+	<div id="popup-video_2" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _icon-close"></button>
+				<div class="embed-youtube popup__video video" data-video-id="2EIZyGNQCRc">
+					<div class="embed-youtube-play video-how__play play-button">
+						<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-video_3" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _icon-close"></button>
+				<div class="embed-youtube popup__video video" data-video-id="ATuMYniucmI">
+					<div class="embed-youtube-play video-how__play play-button">
+						<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-video_4" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _icon-close"></button>
+				<div class="embed-youtube popup__video video" data-video-id="7fiLPe9cakU">
+					<div class="embed-youtube-play video-how__play play-button">
+						<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-video_5" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _icon-close"></button>
+				<div class="embed-youtube popup__video video" data-video-id="l4fRvsj2I-M">
+					<div class="embed-youtube-play video-how__play play-button">
+						<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-video_6" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _icon-close"></button>
+				<div class="embed-youtube popup__video video" data-video-id="S3gUGMtPkqU">
+					<div class="embed-youtube-play video-how__play play-button">
+						<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-video_7" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _icon-close"></button>
+				<div class="embed-youtube popup__video video" data-video-id="GB5r3kpvPaI">
+					<div class="embed-youtube-play video-how__play play-button">
+						<picture><source srcset="img/play-button.webp" type="image/webp"><img src="img/play-button.png" alt="Play" /></picture>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20231011210417"></script>
 </body>
 
 </html>
