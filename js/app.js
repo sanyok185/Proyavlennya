@@ -4717,13 +4717,11 @@
                 }));
             }
         }), 0);
-        let ready = false;
         function loadYoutubeVideo(video) {
             let tag = document.createElement("script");
             tag.src = "http://www.youtube.com/iframe_api";
             let firstScriptTag = document.getElementsByTagName("script")[0];
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-            ready = true;
             function onYouTubeIframeAPIReady() {
                 let player;
                 const videoParent = video.parentElement;
@@ -4749,15 +4747,6 @@
                 loadYoutubeVideo(video);
             }));
         }));
-        self.addEventListener("fetch", (event => {
-            event.respondWith(event.preloadResponse.then((preloadedResponse => {
-                if (preloadedResponse) return preloadedResponse;
-                return fetch(event.request);
-            })));
-            event.waitUntil(caches.open("my-cache").then((cache => cache.add(event.request))));
-        }));
-        window.origin = "https://www.youtube.com";
-        console.log(window.origin);
         window["FLS"] = true;
         isWebp();
         addLoadedClass();
