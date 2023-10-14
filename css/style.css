@@ -327,6 +327,18 @@ body::after {
   visibility: visible;
 }
 
+[data-showmore-button] span:last-child {
+  display: none;
+}
+
+._showmore-active [data-showmore-button] span {
+  display: none;
+}
+
+._showmore-active [data-showmore-button] span:last-child {
+  display: block;
+}
+
 [class*=-ibg] {
   position: relative;
 }
@@ -454,12 +466,6 @@ body::after {
   transition: all 0.3s;
 }
 
-._hide [data-youtube-play],
-._hide .play-button {
-  opacity: 0;
-  visibility: hidden;
-}
-
 .image-video-ibg {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -473,6 +479,29 @@ body::after {
 ._hide .image-video-ibg {
   opacity: 0;
   visibility: hidden;
+}
+
+.hidden {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 12.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.hidden:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.4)), to(rgb(255, 255, 255)));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgb(255, 255, 255) 100%);
+}
+
+.visible {
+  height: auto;
 }
 
 .header {
@@ -654,6 +683,21 @@ body::after {
 
 .footer__phone::before {
   line-height: 100%;
+}
+
+.footer__links {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.375rem;
+}
+
+.footer__developer {
+  display: -ms-grid;
+  display: grid;
+  justify-items: end;
+  color: #FFF;
+  font-weight: 500;
+  line-height: 120%;
 }
 
 .social-footer {
@@ -1774,6 +1818,9 @@ body::after {
   content: "\e900";
   color: #0D0D0E;
   width: 2.5rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 2.5rem;
+          flex: 0 0 2.5rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
   display: -webkit-box;
@@ -1817,9 +1864,16 @@ body::after {
 }
 
 .spollers-schedule__list {
-  display: -ms-grid;
-  display: grid;
-  gap: 0.4375rem;
+  gap: 0.5625rem;
+  padding-right: 5rem;
+  justify-items: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .spollers-schedule__item {
@@ -1850,6 +1904,11 @@ body::after {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 0.25rem;
           flex: 0 0 0.25rem;
+}
+
+.spollers-schedule__text {
+  font-weight: 600;
+  line-height: 150%;
 }
 
 .video-spollers {
@@ -2022,6 +2081,75 @@ body::after {
   text-underline-offset: 0.1875rem;
 }
 
+.swiper-testimonial__text-block {
+  margin-bottom: 1.5625rem;
+  display: -ms-grid;
+  display: grid;
+}
+
+.swiper-testimonial__more {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: white;
+  color: #0D0D0E;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  gap: 0.625rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  font-size: 0.875rem;
+  line-height: 120%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.swiper-testimonial__more:hover {
+  color: #827BFD;
+}
+
+.swiper-testimonial__more::before {
+  padding-top: 0.125rem;
+  font-size: 0.4375rem;
+  font-weight: 600;
+  border-radius: 50%;
+  -ms-flex-preferred-size: 1.6875rem;
+      flex-basis: 1.6875rem;
+  width: 1.6875rem;
+  aspect-ratio: 1/1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0.0625rem solid #e7e7e7;
+}
+
+.swiper-testimonial__more.active::before {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .person-testimonial {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2095,6 +2223,41 @@ body::after {
 
 .circle-testimonial img {
   width: 100%;
+}
+
+[data-showmore] {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 0.3125rem;
+}
+
+[data-showmore-button] {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+[data-showmore-button]::before {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 0.625rem;
+}
+
+._showmore-active [data-showmore-button]::before {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+[data-showmore-button] span:last-child {
+  display: none;
+}
+
+._showmore-active [data-showmore-button] span {
+  display: none;
+}
+
+._showmore-active [data-showmore-button] span:last-child {
+  display: block;
 }
 
 .about {
@@ -2188,8 +2351,11 @@ body::after {
 }
 
 .about__button {
-  -webkit-transition: all 0.5s ease 0.6s;
-  transition: all 0.5s ease 0.6s;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-transition: all 0.5s ease 0.45s;
+  transition: all 0.5s ease 0.45s;
   opacity: 0;
   -webkit-transform: translate(0, 1.25rem);
       -ms-transform: translate(0, 1.25rem);
@@ -2665,10 +2831,6 @@ body::after {
     margin-top: 0.3125rem;
   }
 
-  .social-footer {
-    padding-top: 1.25rem;
-  }
-
   .how__arrow--2 {
     -webkit-transition: all 0.4s ease-in 0s;
     transition: all 0.4s ease-in 0s;
@@ -2862,6 +3024,10 @@ body::after {
     font-size: 1.5625rem;
   }
 
+  .footer__developer {
+    font-size: 0.875rem;
+  }
+
   .social-footer__list {
     gap: 1.75rem;
   }
@@ -3002,6 +3168,10 @@ body::after {
     font-size: 1rem;
   }
 
+  .spollers-schedule__text {
+    font-size: 1.125rem;
+  }
+
   .testimonials__container {
     padding-top: 5.9375rem;
   }
@@ -3018,12 +3188,12 @@ body::after {
     padding-bottom: 2.5rem;
   }
 
-  .swiper-testimonial__text {
-    margin-bottom: 2rem;
-  }
-
   .person-testimonial {
     margin-bottom: 1.5rem;
+  }
+
+  [data-showmore] {
+    margin-bottom: 2rem;
   }
 
   .about__title {
@@ -4284,8 +4454,8 @@ body::after {
         flex-shrink: 0;
     display: block;
     position: relative;
-    width: 1.1875rem;
-    height: 1rem;
+    width: 1rem;
+    height: 0.75rem;
     z-index: 5;
   }
 
@@ -4298,7 +4468,7 @@ body::after {
     right: 0;
     position: absolute;
     width: 100%;
-    height: 0.09375rem;
+    height: 0.125rem;
     border-radius: 0.09375rem;
     background-color: #000;
   }
@@ -4506,6 +4676,9 @@ body::after {
 
   .spollers-schedule__title::before {
     width: 2rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 2rem;
+            flex: 0 0 2rem;
   }
 
   .spollers-schedule__title::before {
@@ -4603,6 +4776,10 @@ body::after {
     -ms-grid-columns: auto;
     grid-template-columns: auto;
     gap: 1.5rem;
+  }
+
+  .footer__developer {
+    justify-items: center;
   }
 }
 
@@ -4763,6 +4940,10 @@ body::after {
 
   .footer__phone::before {
     font-size: 1.125rem;
+  }
+
+  .footer__developer {
+    font-size: 0.625rem;
   }
 
   .social-footer__list {
@@ -5053,6 +5234,10 @@ body::after {
     font-size: 0.875rem;
   }
 
+  .spollers-schedule__text {
+    font-size: 1rem;
+  }
+
   .testimonials__container {
     padding-top: 3rem;
   }
@@ -5069,16 +5254,16 @@ body::after {
     padding-bottom: 1.5rem;
   }
 
-  .swiper-testimonial__text {
-    margin-bottom: 1.5rem;
-  }
-
   .person-testimonial {
     margin-bottom: 0.9375rem;
   }
 
   .circle-testimonial {
     width: 17.75rem;
+  }
+
+  [data-showmore] {
+    margin-bottom: 0.875rem;
   }
 
   .about__container {
@@ -5352,6 +5537,18 @@ body::after {
 @supports not (font-size: clamp( 1.125rem , 0.9684393638rem  +  0.6958250497vw , 1.5625rem )) {
     .footer__phone::before {
       font-size: calc(1.125rem + 0.4375 * (100vw - 22.5rem) / 62.875);
+    }
+}
+
+@supports (font-size: clamp( 0.625rem , 0.5355367793rem  +  0.3976143141vw , 0.875rem )) {
+    .footer__developer {
+      font-size: clamp( 0.625rem , 0.5355367793rem  +  0.3976143141vw , 0.875rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.625rem , 0.5355367793rem  +  0.3976143141vw , 0.875rem )) {
+    .footer__developer {
+      font-size: calc(0.625rem + 0.25 * (100vw - 22.5rem) / 62.875);
     }
 }
 
@@ -5943,6 +6140,18 @@ body::after {
     }
 }
 
+@supports (font-size: clamp( 1rem , 0.9552683897rem  +  0.1988071571vw , 1.125rem )) {
+    .spollers-schedule__text {
+      font-size: clamp( 1rem , 0.9552683897rem  +  0.1988071571vw , 1.125rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , 0.9552683897rem  +  0.1988071571vw , 1.125rem )) {
+    .spollers-schedule__text {
+      font-size: calc(1rem + 0.125 * (100vw - 22.5rem) / 62.875);
+    }
+}
+
 @supports (padding-top: clamp( 3rem , 1.9488071571rem  +  4.6719681909vw , 5.9375rem )) {
     .testimonials__container {
       padding-top: clamp( 3rem , 1.9488071571rem  +  4.6719681909vw , 5.9375rem );
@@ -5991,18 +6200,6 @@ body::after {
     }
 }
 
-@supports (margin-bottom: clamp( 1.5rem , 1.3210735586rem  +  0.7952286282vw , 2rem )) {
-    .swiper-testimonial__text {
-      margin-bottom: clamp( 1.5rem , 1.3210735586rem  +  0.7952286282vw , 2rem );
-    }
-}
-
-@supports not (margin-bottom: clamp( 1.5rem , 1.3210735586rem  +  0.7952286282vw , 2rem )) {
-    .swiper-testimonial__text {
-      margin-bottom: calc(1.5rem + 0.5 * (100vw - 22.5rem) / 62.875);
-    }
-}
-
 @supports (margin-bottom: clamp( 0.9375rem , 0.7362077535rem  +  0.8946322068vw , 1.5rem )) {
     .person-testimonial {
       margin-bottom: clamp( 0.9375rem , 0.7362077535rem  +  0.8946322068vw , 1.5rem );
@@ -6024,6 +6221,18 @@ body::after {
 @supports not (width: clamp( 17.75rem , 15.0213717694rem  +  12.1272365805vw , 25.375rem )) {
     .circle-testimonial {
       width: calc(17.75rem + 7.625 * (100vw - 22.5rem) / 62.875);
+    }
+}
+
+@supports (margin-bottom: clamp( 0.875rem , 0.472415507rem  +  1.7892644135vw , 2rem )) {
+    [data-showmore] {
+      margin-bottom: clamp( 0.875rem , 0.472415507rem  +  1.7892644135vw , 2rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 0.875rem , 0.472415507rem  +  1.7892644135vw , 2rem )) {
+    [data-showmore] {
+      margin-bottom: calc(0.875rem + 1.125 * (100vw - 22.5rem) / 62.875);
     }
 }
 

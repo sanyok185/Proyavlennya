@@ -370,7 +370,6 @@
             this.options.init ? this.initPopups() : null;
         }
         initPopups() {
-            this.popupLogging(`Прокинувся`);
             this.eventsPopup();
         }
         eventsPopup() {
@@ -471,7 +470,6 @@
                             popup: this
                         }
                     }));
-                    this.popupLogging(`Відкрив попап`);
                 } else this.popupLogging(`Йой, такого попапу немає. Перевірте коректність введення. `);
             }
         }
@@ -506,7 +504,6 @@
             setTimeout((() => {
                 this._focusTrap();
             }), 50);
-            this.popupLogging(`Закрив попап`);
         }
         _getHash() {
             if (this.options.hashSettings.location) this.hash = this.targetOpen.selector.includes("#") ? this.targetOpen.selector : this.targetOpen.selector.replace(".", "#");
@@ -554,10 +551,7 @@
             this.config = Object.assign(defaultConfig, props);
             if (this.config.init) {
                 const paralaxMouse = document.querySelectorAll("[data-prlx-mouse]");
-                if (paralaxMouse.length) {
-                    this.paralaxMouseInit(paralaxMouse);
-                    this.setLogging(`Прокинувся, стежу за об'єктами: (${paralaxMouse.length})`);
-                } else this.setLogging("Немає жодного обєкта. Сплю...");
+                if (paralaxMouse.length) this.paralaxMouseInit(paralaxMouse); else this.setLogging("Немає жодного обєкта. Сплю...");
             }
         }
         paralaxMouseInit(paralaxMouse) {
@@ -635,8 +629,7 @@
                     behavior: "smooth"
                 });
             }
-            FLS(`[gotoBlock]: Юхуу...їдемо до ${targetBlock}`);
-        } else FLS(`[gotoBlock]: Йой... Такого блоку немає на сторінці: ${targetBlock}`);
+        }
     };
     function formFieldsInit(options = {
         viewPass: false,
@@ -4070,43 +4063,69 @@
         });
     }
     function initSliders() {
-        if (document.querySelector(".swiper-testimonial")) new swiper_core_Swiper(".swiper-testimonial", {
-            modules: [ Navigation, Pagination ],
-            observer: true,
-            observeParents: true,
-            slidesPerView: 3,
-            spaceBetween: 24,
-            autoHeight: true,
-            speed: 800,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true
-            },
-            navigation: {
-                prevEl: ".testimonials__controls .swiper-button-prev",
-                nextEl: ".testimonials__controls .swiper-button-next"
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1
+        if (document.querySelector(".swiper-testimonial")) {
+            const swiper = new swiper_core_Swiper(".swiper-testimonial", {
+                modules: [ Navigation, Pagination ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 3,
+                spaceBetween: 24,
+                autoHeight: true,
+                speed: 800,
+                observer: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
                 },
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 15
+                navigation: {
+                    prevEl: ".testimonials__controls .swiper-button-prev",
+                    nextEl: ".testimonials__controls .swiper-button-next"
                 },
-                768: {
-                    slidesPerView: 2
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1
+                    },
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 15
+                    },
+                    768: {
+                        slidesPerView: 2
+                    },
+                    992: {
+                        slidesPerView: 2
+                    },
+                    1366: {
+                        slidesPerView: 3,
+                        spaceBetween: 24
+                    }
                 },
-                992: {
-                    slidesPerView: 2
-                },
-                1366: {
-                    slidesPerView: 3,
-                    spaceBetween: 24
+                on: {
+                    click: function() {
+                        swiper.updateAutoHeight();
+                        swiper.update();
+                    }
                 }
-            },
-            on: {}
-        });
+            });
+            document.querySelector("button.swiper-testimonial__more").addEventListener("click", (function() {
+                swiper.updateAutoHeight();
+                swiper.updateAutoHeight();
+            }));
+            document.querySelector("button.swiper-testimonial__more").addEventListener("ontouchstart", (function() {
+                swiper.updateAutoHeight();
+            }));
+            document.querySelector("button.swiper-testimonial__more").addEventListener("click", (function() {
+                swiper.updateAutoHeight();
+                swiper.update();
+            }));
+            window.addEventListener("mousemove", (function(e) {
+                swiper.updateAutoHeight();
+                swiper.updateSize();
+            }));
+            window.addEventListener("click", (function(e) {
+                swiper.updateAutoHeight();
+            }));
+        }
     }
     window.addEventListener("load", (function(e) {
         initSliders();
@@ -4129,7 +4148,6 @@
         }
         scrollWatcherConstructor(items) {
             if (items.length) {
-                this.scrollWatcherLogging(`Прокинувся, стежу за об'єктами (${items.length})...`);
                 let uniqParams = uniqArray(Array.from(items).map((function(item) {
                     return `${item.dataset.watchRoot ? item.dataset.watchRoot : null}|${item.dataset.watchMargin ? item.dataset.watchMargin : "0px"}|${item.dataset.watchThreshold ? item.dataset.watchThreshold : 0}`;
                 })));
@@ -4149,16 +4167,13 @@
                     let configWatcher = this.getScrollWatcherConfig(paramsWatch);
                     this.scrollWatcherInit(groupItems, configWatcher);
                 }));
-            } else this.scrollWatcherLogging("Сплю, немає об'єктів для стеження. ZzzZZzz");
+            }
         }
         getScrollWatcherConfig(paramsWatch) {
             let configWatcher = {};
-            if (document.querySelector(paramsWatch.root)) configWatcher.root = document.querySelector(paramsWatch.root); else if (paramsWatch.root !== "null") this.scrollWatcherLogging(`Эмм... батьківського об'єкта ${paramsWatch.root} немає на сторінці`);
+            if (document.querySelector(paramsWatch.root)) configWatcher.root = document.querySelector(paramsWatch.root); else if (paramsWatch.root !== "null") ;
             configWatcher.rootMargin = paramsWatch.margin;
-            if (paramsWatch.margin.indexOf("px") < 0 && paramsWatch.margin.indexOf("%") < 0) {
-                this.scrollWatcherLogging(`йой, налаштування data-watch-margin потрібно задавати в PX або %`);
-                return;
-            }
+            if (paramsWatch.margin.indexOf("px") < 0 && paramsWatch.margin.indexOf("%") < 0) return;
             if (paramsWatch.threshold === "prx") {
                 paramsWatch.threshold = [];
                 for (let i = 0; i <= 1; i += .005) paramsWatch.threshold.push(i);
@@ -4178,21 +4193,12 @@
             items.forEach((item => this.observer.observe(item)));
         }
         scrollWatcherIntersecting(entry, targetElement) {
-            if (entry.isIntersecting) {
-                !targetElement.classList.contains("_watcher-view") ? targetElement.classList.add("_watcher-view") : null;
-                this.scrollWatcherLogging(`Я бачу ${targetElement.classList}, додав клас _watcher-view`);
-            } else {
-                targetElement.classList.contains("_watcher-view") ? targetElement.classList.remove("_watcher-view") : null;
-                this.scrollWatcherLogging(`Я не бачу ${targetElement.classList}, прибрав клас _watcher-view`);
-            }
+            if (entry.isIntersecting) !targetElement.classList.contains("_watcher-view") ? targetElement.classList.add("_watcher-view") : null; else targetElement.classList.contains("_watcher-view") ? targetElement.classList.remove("_watcher-view") : null;
         }
         scrollWatcherOff(targetElement, observer) {
             observer.unobserve(targetElement);
-            this.scrollWatcherLogging(`Я перестав стежити за ${targetElement.classList}`);
         }
-        scrollWatcherLogging(message) {
-            this.config.logging ? FLS(`[Спостерігач]: ${message}`) : null;
-        }
+        scrollWatcherLogging(message) {}
         scrollWatcherCallback(entry, observer) {
             const targetElement = entry.target;
             this.scrollWatcherIntersecting(entry, targetElement);
@@ -4348,9 +4354,70 @@
                 iframe.setAttribute("src", "https://www.youtube.com/embed/" + this.dataset.videoId + "?rel=0&showinfo=0&autoplay=1");
                 this.innerHTML = "";
                 this.appendChild(iframe);
+                document.addEventListener("click", (function(e) {
+                    const target = e.target;
+                    if (target.closest(".popup__wrapper") || target.closest(".popup__close")) {
+                        container.innerHTML = `<div class="embed-youtube-play video-how__play play-button">\n\t\t\t\t\t\t<img src="img/play-button.png" alt="Play" />\n\t\t\t\t\t</div>`;
+                        container.appendChild(image);
+                        image.classList.add("image-video-ibg");
+                    }
+                }));
+                document.addEventListener("keydown", (function(event) {
+                    if (event.key === "Escape") {
+                        container.innerHTML = `<div class="embed-youtube-play video-how__play play-button">\n\t\t\t\t\t\t<img src="img/play-button.png" alt="Play" />\n\t\t\t\t\t</div>`;
+                        container.appendChild(image);
+                        image.classList.add("image-video-ibg");
+                    }
+                }));
             }));
         }
     })();
+    document.addEventListener("click", (() => {}));
+    if (document.querySelector("iframe")) {
+        const video = document.querySelector("iframe");
+        const close = video.closest(".popup__close");
+        close.addEventListener("click", stopVideoFunction(video));
+    }
+    function stopVideoFunction(video) {
+        var ysrc = video.src;
+        var newsrc = ysrc.replace("&autoplay=1", "");
+        document.getElementById("videoIframe").src = newsrc;
+    }
+    const Utils = {
+        addClass: function(element, theClass) {
+            element.classList.add(theClass);
+        },
+        removeClass: function(element, theClass) {
+            element.classList.remove(theClass);
+        },
+        showMore: function(element, excerpt) {
+            element.addEventListener("click", (event => {
+                event.target.textContent.toLowerCase();
+                const button = event.target;
+                event.preventDefault();
+                console.log(this);
+                if (!button.classList.contains("active")) {
+                    this.removeClass(excerpt, "hidden");
+                    this.addClass(excerpt, "visible");
+                    button.classList.add("active");
+                } else {
+                    this.removeClass(excerpt, "visible");
+                    this.addClass(excerpt, "hidden");
+                    button.classList.remove("active");
+                }
+            }));
+        }
+    };
+    const ExcerptWidget = {
+        showMore: function(showMoreLinksTarget, excerptTarget) {
+            const showMoreLinks = document.querySelectorAll(showMoreLinksTarget);
+            showMoreLinks.forEach((function(link) {
+                const excerpt = link.previousElementSibling.querySelector(excerptTarget);
+                Utils.showMore(link, excerpt);
+            }));
+        }
+    };
+    ExcerptWidget.showMore(".swiper-testimonial__more", ".swiper-testimonial__text");
     window["FLS"] = true;
     isWebp();
     addLoadedClass();
