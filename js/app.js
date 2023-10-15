@@ -4099,29 +4099,8 @@
                         slidesPerView: 3,
                         spaceBetween: 24
                     }
-                },
-                on: {
-                    click: function() {
-                        swiper.updateAutoHeight();
-                        swiper.update();
-                    }
                 }
             });
-            document.querySelector("button.swiper-testimonial__more").addEventListener("click", (function() {
-                swiper.updateAutoHeight();
-                swiper.updateAutoHeight();
-            }));
-            document.querySelector("button.swiper-testimonial__more").addEventListener("ontouchstart", (function() {
-                swiper.updateAutoHeight();
-            }));
-            document.querySelector("button.swiper-testimonial__more").addEventListener("click", (function() {
-                swiper.updateAutoHeight();
-                swiper.update();
-            }));
-            window.addEventListener("mousemove", (function(e) {
-                swiper.updateAutoHeight();
-                swiper.updateSize();
-            }));
             window.addEventListener("click", (function(e) {
                 swiper.updateAutoHeight();
             }));
