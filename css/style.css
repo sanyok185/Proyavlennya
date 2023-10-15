@@ -484,7 +484,7 @@ body::after {
 .hidden {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  height: 12.5rem;
+  max-height: 12.5rem;
   overflow: hidden;
   position: relative;
 }
@@ -501,7 +501,7 @@ body::after {
 }
 
 .visible {
-  height: auto;
+  max-height: 100%;
 }
 
 .header {
@@ -2070,6 +2070,8 @@ body::after {
           flex: 1 1 auto;
   font-weight: 500;
   line-height: 150%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .swiper-testimonial__link {
@@ -2223,41 +2225,6 @@ body::after {
 
 .circle-testimonial img {
   width: 100%;
-}
-
-[data-showmore] {
-  display: -ms-grid;
-  display: grid;
-  row-gap: 0.3125rem;
-}
-
-[data-showmore-button] {
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
-[data-showmore-button]::before {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  font-size: 0.625rem;
-}
-
-._showmore-active [data-showmore-button]::before {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-[data-showmore-button] span:last-child {
-  display: none;
-}
-
-._showmore-active [data-showmore-button] span {
-  display: none;
-}
-
-._showmore-active [data-showmore-button] span:last-child {
-  display: block;
 }
 
 .about {
@@ -3190,10 +3157,6 @@ body::after {
 
   .person-testimonial {
     margin-bottom: 1.5rem;
-  }
-
-  [data-showmore] {
-    margin-bottom: 2rem;
   }
 
   .about__title {
@@ -4452,10 +4415,12 @@ body::after {
   .icon-menu {
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     position: relative;
     width: 1rem;
-    height: 0.75rem;
+    height: 0.875rem;
     z-index: 5;
   }
 
@@ -4468,7 +4433,7 @@ body::after {
     right: 0;
     position: absolute;
     width: 100%;
-    height: 0.125rem;
+    height: 0.09375rem;
     border-radius: 0.09375rem;
     background-color: #000;
   }
@@ -4483,12 +4448,12 @@ body::after {
   }
 
   .icon-menu span:nth-child(1) {
-    top: calc(50% - 0.21875rem);
+    top: calc(50% - 0.1875rem);
     width: 0.875rem;
   }
 
   .icon-menu span:nth-child(2) {
-    top: calc(50% + 0.09375rem);
+    top: calc(50% + 0.0875rem);
   }
 
   .menu-open .icon-menu span {
@@ -5260,10 +5225,6 @@ body::after {
 
   .circle-testimonial {
     width: 17.75rem;
-  }
-
-  [data-showmore] {
-    margin-bottom: 0.875rem;
   }
 
   .about__container {
@@ -6221,18 +6182,6 @@ body::after {
 @supports not (width: clamp( 17.75rem , 15.0213717694rem  +  12.1272365805vw , 25.375rem )) {
     .circle-testimonial {
       width: calc(17.75rem + 7.625 * (100vw - 22.5rem) / 62.875);
-    }
-}
-
-@supports (margin-bottom: clamp( 0.875rem , 0.472415507rem  +  1.7892644135vw , 2rem )) {
-    [data-showmore] {
-      margin-bottom: clamp( 0.875rem , 0.472415507rem  +  1.7892644135vw , 2rem );
-    }
-}
-
-@supports not (margin-bottom: clamp( 0.875rem , 0.472415507rem  +  1.7892644135vw , 2rem )) {
-    [data-showmore] {
-      margin-bottom: calc(0.875rem + 1.125 * (100vw - 22.5rem) / 62.875);
     }
 }
 
